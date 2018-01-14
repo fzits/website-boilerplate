@@ -1,0 +1,28 @@
+{
+  "name": "website-boilerplate",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "production": "(export NODE_ENV=production; ./scripts/scss-build.sh && webpack)",
+    "watch": "./scripts/scss-watch.sh & webpack -w --display minimal",
+    "browser-sync": "node ./scripts/browser-sync.js"
+  },
+  "author": "Tsukasa Fujisawa",
+  "license": "MIT",
+  "dependencies": {},
+  "devDependencies": {
+    "babel-core": "^6.26.0",
+    "babel-eslint": "^8.2.1",
+    "babel-loader": "^7.1.2",
+    "babel-preset-env": "^1.6.1",
+    "browser-sync": "^2.23.5",
+    "chokidar": "^2.0.0",
+    "chokidar-cli": "^1.2.0",
+    "eslint": "^4.15.0",
+    "htmlhint": "^0.9.13",
+    "node-sass": "^4.7.2",
+    "uglifyjs-webpack-plugin": "^1.1.6",
+    "webpack": "^3.10.0"
+  }
+}
