@@ -2,3 +2,4 @@ node_modules/
 docker/mysql/data/*
 www/html/css/*
 www/html/js/*
+!.gitkeep
