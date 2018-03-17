@@ -10,19 +10,21 @@
   },
   "author": "Tsukasa Fujisawa",
   "license": "MIT",
-  "dependencies": {},
+  "dependencies": {
+    "npm": "^5.7.1"
+  },
   "devDependencies": {
     "babel-core": "^6.26.0",
-    "babel-eslint": "^8.2.1",
-    "babel-loader": "^7.1.2",
+    "babel-eslint": "^8.2.2",
+    "babel-loader": "^7.1.4",
     "babel-preset-env": "^1.6.1",
-    "browser-sync": "^2.23.5",
-    "chokidar": "^2.0.0",
+    "browser-sync": "^2.23.6",
+    "chokidar": "^2.0.2",
     "chokidar-cli": "^1.2.0",
-    "eslint": "^4.15.0",
+    "eslint": "^4.19.0",
     "htmlhint": "^0.9.13",
-    "node-sass": "^4.7.2",
-    "uglifyjs-webpack-plugin": "^1.1.6",
-    "webpack": "^3.10.0"
+    "node-sass": "^4.8.2",
+    "uglifyjs-webpack-plugin": "^1.2.4",
+    "webpack": "^3.11.0"
   }
 }
