@@ -1,6 +1,6 @@
 #!/bin/bash
 
-source ./scripts/scss.env
+source ./.env
 
 OPT_SOURCE_MAP="--source-map ${SCSS_DEST}"
 OPT_QUIET="--quiet"
