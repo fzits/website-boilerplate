@@ -1,5 +1,5 @@
 #!/bin/bash
 
-source ./scripts/scss.env
+source ./.env
 
 chokidar ${SCSS_SRC}** -c './scripts/scss-build.sh'

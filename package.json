@@ -6,7 +6,7 @@
   "scripts": {
     "production": "(export NODE_ENV=production; ./scripts/scss-build.sh && webpack)",
     "watch": "./scripts/scss-watch.sh & webpack -w --display minimal",
-    "browser-sync": "node ./scripts/browser-sync.js"
+    "browser-sync": "./scripts/browser-sync.sh"
   },
   "author": "Tsukasa Fujisawa",
   "license": "MIT",
