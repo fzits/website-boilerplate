@@ -20,6 +20,7 @@
     "babel-loader": "^7.1.4",
     "babel-preset-env": "^1.7.0",
     "browser-sync": "^2.24.4",
+    "clean-webpack-plugin": "^0.1.19",
     "eslint": "^4.19.1",
     "htmlhint": "^0.9.13",
     "node-sass": "^4.9.0",
