@@ -1,18 +1,21 @@
 /* vim:set sw=2: */
 /* eslint indent: ['error', 2] */
 
-const path = require('path');
-const webpack = require('webpack');
-const UglifyJsPlugin = require('uglifyjs-webpack-plugin');
+const CleanWebpackPlugin = require('clean-webpack-plugin');
 
-const JS_SRC = './www/html/src/js';
+const midx = process.argv.indexOf('--mode');
+const mode = (midx > -1) ? process.argv[midx + 1] : 'development';
+const isProduction = (mode == 'production');
+
+const SRC = './www/html/src/js';
+const DIST = `${__dirname}/www/html/js`;
 
 module.exports = {
   entry: {
-    sample: `${JS_SRC}/sample.js`
+    sample: `${SRC}/sample.js`
   },
   output: {
-    path: path.resolve(__dirname, 'www/html/js'),
+    path: DIST,
     filename: '[name].bundle.js'
   },
   module: {
@@ -34,15 +37,7 @@ module.exports = {
     ]
   },
   plugins: [
-    new webpack.DefinePlugin({
-      'process.env.NODE_ENV': JSON.stringify(process.env.NODE_ENV)
-    }),
-    new UglifyJsPlugin({
-      test: /\.js$/,
-      parallel: true,
-      sourceMap: process.env.NODE_ENV !== 'production',
-      exclude: /node_modules/
-    })
+    new CleanWebpackPlugin([DIST])
   ],
-  devtool: 'source-map'
+  devtool: isProduction ? 'eval' : 'source-map'
 };
